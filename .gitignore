@@ -1,0 +1,12 @@
+# editor
+.vscode
+
+# environment variables
+.env
+.env.local
+
+# dependencies
+node_modules
+
+# build
+dist
