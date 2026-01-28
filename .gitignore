@@ -8,5 +8,6 @@
 # dependencies
 node_modules
 
-# build
+# build and generated files
 dist
+/src/generated/prisma
