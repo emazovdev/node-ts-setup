@@ -1,14 +1,16 @@
 import { env } from './config/env.js'
 import express from 'express'
+import userRoutes from './routes/user.routes.js'
 
 async function bootstrap() {
 	const app = express()
-
 	app.use(express.json())
 
 	app.get('/health', (_req, res) => {
 		res.status(200).json({ ok: true })
 	})
+
+	app.use('/users', userRoutes)
 
 	app.listen(env.port, () => {
 		console.log(`Server started on http://localhost:${env.port}`)
